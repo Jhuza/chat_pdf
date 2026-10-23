@@ -34,3 +34,10 @@ python -m pytest tests -q
 Las pruebas usan el PDF del repositorio, la extracción, el fragmentador, FAISS y la cadena QA reales, con embeddings y respuesta remota simulados. Cubren validación, reutilización del índice, cambio de clave/documento y PDF vacío o corrupto. No consumen API. La disponibilidad y calidad de la respuesta del servicio requieren una prueba con una clave válida.
 
 Consulta `AURORA.md` para mantener el sistema visual. El archivo de entrada en Streamlit Cloud sigue siendo `app.py`.
+
+
+## Interfaz Aurora
+
+[Guía visual](docs/guia-visual-aurora.md) · [Ficha de la experiencia](docs/EXPERIENCIA.md) · [Aplicación](https://chatpdf-fgtvnhpsz5z4sanjbpjpcu.streamlit.app/)
+
+La personalización conserva el propósito del ejercicio de clase. Los componentes compartidos se documentan en [AURORA.md](AURORA.md).
