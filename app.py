@@ -2,7 +2,9 @@ import hashlib
 import io
 import platform
 import streamlit as st
-from aurora import empty_state, footer, hero, section, setup
+from aurora import empty_state, footer, hero, section, setup, project_context
+import json
+from pathlib import Path
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings
@@ -13,6 +15,7 @@ from langchain.chains.question_answering import load_qa_chain
 setup("ChatPDF", "01 / DOCUMENTOS")
 hero("CHATPDF · GENERACIÓN AUMENTADA POR RECUPERACIÓN", "Un documento.", "Una conversación.",
      "Carga un PDF, pregunta sobre su contenido y explora respuestas construidas a partir de sus fragmentos.")
+project_context(json.loads(Path(__file__).with_name("app_info.json").read_text(encoding="utf-8")))
 
 with st.sidebar:
     st.subheader("Acerca de ChatPDF")
